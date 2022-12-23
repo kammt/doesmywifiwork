@@ -1,4 +1,11 @@
 <html style="color-scheme: light dark">
 <center>
-  <h1 style="font-size: 120px">Yes.</h1>
+  <h1 id="statusText" style="font-size: 120px">Yes.</h1>
+  <script>
+      if(navigator.connection.type == "wifi") {
+          document.getElementById("statusText").innerHTML = "Yes.";
+      } else {
+          document.getElementById("statusText").innerHTML = "Maybe.";
+      }
+  </script>
 </center>
