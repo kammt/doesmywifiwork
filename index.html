@@ -2,7 +2,7 @@
 <center>
   <h1 id="statusText" style="font-size: 120px">Yes.</h1>
   <script>
-      if(navigator.connection.type == "wifi") {
+      if((navigator.connection || {}).type === "wifi") {
           document.getElementById("statusText").innerHTML = "Yes.";
       } else {
           document.getElementById("statusText").innerHTML = "Maybe.";
